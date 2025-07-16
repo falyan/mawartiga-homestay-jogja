@@ -74,8 +74,10 @@ body {
  /* VIDEO AREA FULLSCREEN */
 .video-area {
     width: 100%;
-    height: 60vh; /* Full height layar */
+    height: 60vh; 
     overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   
   .video-area video {
@@ -83,6 +85,7 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    margin-top: 75px;
   }
   
   /* ROW UNTUK 3 GAMBAR */
@@ -91,12 +94,12 @@ body {
     justify-content: center;
     gap: 20px;
     padding: 10px 20px;
-    flex-wrap: wrap; /* biar responsif */
+    flex-wrap: wrap;
   }
   
   .image-box {
     flex: 1;
-    max-width: 33.3333%; /* bagi 3 sama rata */
+    max-width: 33.3333%;
     aspect-ratio: 4 / 3;
     overflow: hidden;
     border-radius: 10px;
@@ -106,7 +109,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* display: block; */
   }
   
   
