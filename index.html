@@ -105,16 +105,22 @@
   const video = document.getElementById('myVideo');
   const fullscreenBtn = document.getElementById('fullscreenBtn');
 
-  fullscreenBtn.addEventListener('click', () => {
-    if (video.requestFullscreen) {
-      video.requestFullscreen();
-    } else if (video.webkitRequestFullscreen) { /* Safari */
-      video.webkitRequestFullscreen();
-    } else if (video.msRequestFullscreen) { /* IE11 */
-      video.msRequestFullscreen();
+  // Fungsi fullscreen dengan fallback untuk berbagai browser
+  function openFullscreen(elem) {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+      elem.msRequestFullscreen();
     }
-  });
+  }
+
+  // Tambahkan event click dan touchstart agar responsif di mobile
+  fullscreenBtn.addEventListener('click', () => openFullscreen(video));
+  fullscreenBtn.addEventListener('touchstart', () => openFullscreen(video));
 </script>
+
 
 
     <!-- <header class="hero-mawartiga">
