@@ -103,6 +103,9 @@ body {
     justify-content: space-between; 
     max-width: 900px;
     margin: auto;
+    gap: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   .image-box {
     flex: 0 0 32%;
