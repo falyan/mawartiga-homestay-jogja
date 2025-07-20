@@ -63,7 +63,62 @@
     </nav>
 
     <header class="hero-mawartiga">
-        <!-- VIDEO FULLSCREEN -->
+  <!-- VIDEO FULLSCREEN -->
+  <div class="video-area" style="position: relative; width: 100%; max-width: 800px; margin: auto;">
+    <video id="myVideo" muted autoplay loop playsinline style="width: 100%; display: block;">
+      <source src="https://res.cloudinary.com/dxxs7g3ll/video/upload/v1752567566/video-1_nbnryk.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Tombol fullscreen -->
+    <button id="fullscreenBtn" style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.5); color: white; border: none; padding: 8px 12px; cursor: pointer; border-radius: 4px;">
+      Lihat Fullscreen
+    </button>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- ENAM GAMBAR SEJAJAR -->
+  <div class="image-row" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; max-width: 900px; margin: auto;">
+    <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
+      <img src="https://res.cloudinary.com/dxxs7g3ll/image/upload/v1752568658/image-1-min_rtq3md.png" alt="Gambar 1" style="width: 100%; display: block;">
+    </div>
+    <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
+      <img src="https://res.cloudinary.com/dxxs7g3ll/image/upload/v1752568720/image-3-min_m77jv8.png" alt="Gambar 2" style="width: 100%; display: block;">
+    </div>
+    <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
+      <img src="assets/images/image-3.png" alt="Gambar 3" style="width: 100%; display: block;">
+    </div>
+    <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
+      <img src="https://via.placeholder.com/150" alt="Gambar 4" style="width: 100%; display: block;">
+    </div>
+    <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
+      <img src="https://via.placeholder.com/150" alt="Gambar 5" style="width: 100%; display: block;">
+    </div>
+    <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
+      <img src="https://via.placeholder.com/150" alt="Gambar 6" style="width: 100%; display: block;">
+    </div>
+  </div>
+</header>
+
+<script>
+  const video = document.getElementById('myVideo');
+  const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+  fullscreenBtn.addEventListener('click', () => {
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) { /* Safari */
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) { /* IE11 */
+      video.msRequestFullscreen();
+    }
+  });
+</script>
+
+
+    <!-- <header class="hero-mawartiga">
+        
         <div class="video-area">
           <video muted autoplay loop playsinline>
             <source src="https://res.cloudinary.com/dxxs7g3ll/video/upload/v1752567566/video-1_nbnryk.mp4" type="video/mp4">
@@ -72,7 +127,7 @@
 
         <div class="section-divider"></div>
       
-        <!-- TIGA GAMBAR SEJAJAR -->
+        
         <div class="image-row">
           <div class="image-box">
             <img src="https://res.cloudinary.com/dxxs7g3ll/image/upload/v1752568658/image-1-min_rtq3md.png" alt="Gambar 1">
@@ -84,7 +139,7 @@
             <img src="assets/images/image-3.png" alt="Gambar 3">
           </div>
         </div>
-      </header>      
+      </header>       -->
 
       <div class="section-divider"></div>
 
@@ -120,7 +175,7 @@
                   <!-- Baris 1 -->
                   <div class="col-md-4 d-flex align-items-center mb-3">
                     <i class="bi bi-wifi me-2 fs-3" style="color: #5D3A00;"></i>
-                    <span>Free Wi-Fi</span>
+                    <span>WiFi</span>
                   </div>
                   <div class="col-md-4 d-flex align-items-center mb-3">
                     <i class="bi bi-snow me-2 fs-3" style="color: #5D3A00;"></i>
@@ -133,26 +188,31 @@
       
                   <!-- Baris 2 -->
                   <div class="col-md-4 d-flex align-items-center mb-3">
-                    <i class="bi bi-cup-hot me-2 fs-3" style="color: #5D3A00;"></i>
-                    <span>Kitchen</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#5D3A00" class="me-2" viewBox="0 0 24 24">
+                        <path d="M3 10h18v2H3v-2zm1 3h16v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6zm4-7h2v2H8V6zm4 0h2v2h-2V6zm4 0h2v2h-2V6z"/>
+                      </svg>
+                      <span>Kitchen</span>
                   </div>
+                
                   <div class="col-md-4 d-flex align-items-center mb-3">
                     <i class="bi bi-car-front me-2 fs-3" style="color: #5D3A00;"></i>
                     <span>Parking Space</span>
                   </div>
                   <div class="col-md-4 d-flex align-items-center mb-3">
                     <i class="bi bi-basket2 me-2 fs-3" style="color: #5D3A00;"></i>
-                    <span>Laundry Service</span>
+                    <span>Washing machine</span>
                   </div>
       
                   <!-- Baris 3 (Tambahan Baru) -->
                   <div class="col-md-4 d-flex align-items-center mb-3">
                     <i class="bi bi-tv me-2 fs-3" style="color: #5D3A00;"></i>
-                    <span>Smart TV</span>
+                    <span>TV & Netflix</span>
                   </div>
                   <div class="col-md-4 d-flex align-items-center mb-3">
-                    <i class="bi bi-shield-lock me-2 fs-3" style="color: #5D3A00;"></i>
-                    <span>Secure Access</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#5D3A00" class="me-2" viewBox="0 0 24 24">
+                        <path d="M5 16c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-2H5v2zm0-4h14v-3a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3z"/>
+                        </svg>
+                      <span>Iron</span>
                   </div>
                   <div class="col-md-4 d-flex align-items-center mb-3">
                     <i class="bi bi-geo-alt me-2 fs-3" style="color: #5D3A00;"></i>
