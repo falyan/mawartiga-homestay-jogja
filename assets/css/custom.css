@@ -282,6 +282,11 @@ body {
     margin: 30px 0;
   }
 
+  .card-img-top {
+  height: 180px;         /* kamu bisa ubah sesuai kebutuhan */
+  object-fit: cover;     /* biar gambar tetap proporsional */
+}
+
   #scrollTopBtn {
     position: fixed;
     bottom: 30px;
