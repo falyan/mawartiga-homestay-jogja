@@ -62,15 +62,123 @@
         </div>
     </nav>
 
-    <header class="hero-mawartiga">
-  <!-- VIDEO FULLSCREEN -->
+  <header class="hero-mawartiga">
+  <div class="video-area" style="position: relative; width: 100%; max-width: 800px; margin: auto;">
+    <video
+      id="myVideo"
+      muted
+      autoplay
+      loop
+      playsinline
+      controls
+      style="width: 100%; display: block;"
+    >
+      <source src="https://res.cloudinary.com/dxxs7g3ll/video/upload/v1752567566/video-1_nbnryk.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Tombol fullscreen custom, hanya tampil di desktop -->
+    <button
+      id="fullscreenBtn"
+      style="
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 4px;
+        display: none;
+      "
+    >
+      Tampilkan layar penuh
+    </button>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div
+    class="image-row"
+    style="
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: auto;
+    "
+  >
+    <!-- Gambar 1-6 seperti sebelumnya -->
+    <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
+      <img
+        src="https://res.cloudinary.com/dxxs7g3ll/image/upload/v1752568658/image-1-min_rtq3md.png"
+        alt="Gambar 1"
+        style="width: 100%; display: block"
+      />
+    </div>
+    <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
+      <img
+        src="https://res.cloudinary.com/dxxs7g3ll/image/upload/v1752568720/image-3-min_m77jv8.png"
+        alt="Gambar 2"
+        style="width: 100%; display: block"
+      />
+    </div>
+    <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
+      <img src="assets/images/image-3.png" alt="Gambar 3" style="width: 100%; display: block" />
+    </div>
+    <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
+      <img src="https://via.placeholder.com/150" alt="Gambar 4" style="width: 100%; display: block" />
+    </div>
+    <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
+      <img src="https://via.placeholder.com/150" alt="Gambar 5" style="width: 100%; display: block" />
+    </div>
+    <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
+      <img src="https://via.placeholder.com/150" alt="Gambar 6" style="width: 100%; display: block" />
+    </div>
+  </div>
+</header>
+
+<script>
+  const video = document.getElementById("myVideo");
+  const fullscreenBtn = document.getElementById("fullscreenBtn");
+
+  // Cek lebar layar, tampilkan tombol fullscreen hanya di desktop (>768px)
+  function checkScreenWidth() {
+    if (window.innerWidth > 768) {
+      fullscreenBtn.style.display = "block";
+      video.removeAttribute("controls"); // hapus controls di desktop supaya custom
+    } else {
+      fullscreenBtn.style.display = "none";
+      video.setAttribute("controls", ""); // tampilkan controls di mobile
+    }
+  }
+
+  window.addEventListener("resize", checkScreenWidth);
+  window.addEventListener("load", checkScreenWidth);
+
+  fullscreenBtn.addEventListener("click", () => {
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) {
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) {
+      video.msRequestFullscreen();
+    }
+  });
+</script>
+  
+
+    <!-- <header class="hero-mawartiga">
+  
   <div class="video-area" style="position: relative; width: 100%; max-width: 800px; margin: auto;">
     <video id="myVideo" muted autoplay loop playsinline controls style="width: 100%; display: block;">
       <source src="https://res.cloudinary.com/dxxs7g3ll/video/upload/v1752567566/video-1_nbnryk.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
-    <!-- Tombol fullscreen -->
+    
     <button id="fullscreenBtn" style="position: absolute; bottom: 10px; right: 10px; background: rgba(0,0,0,0.5); color: white; border: none; padding: 8px 12px; cursor: pointer; border-radius: 4px;">
       Lihat Layar Penuh
     </button>
@@ -78,7 +186,7 @@
 
   <div class="section-divider"></div>
 
-  <!-- ENAM GAMBAR SEJAJAR -->
+
   <div class="image-row" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; max-width: 900px; margin: auto;">
     <div class="image-box" style="flex: 1 1 calc(16.66% - 10px); max-width: calc(16.66% - 10px);">
       <img src="https://res.cloudinary.com/dxxs7g3ll/image/upload/v1752568658/image-1-min_rtq3md.png" alt="Gambar 1" style="width: 100%; display: block;">
@@ -105,21 +213,21 @@
   const video = document.getElementById('myVideo');
   const fullscreenBtn = document.getElementById('fullscreenBtn');
 
-  // Fungsi fullscreen dengan fallback untuk berbagai browser
+
   function openFullscreen(elem) {
     if (elem.requestFullscreen) {
       elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) { /* Safari */
+    } else if (elem.webkitRequestFullscreen) { 
       elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE11 */
+    } else if (elem.msRequestFullscreen) { 
       elem.msRequestFullscreen();
     }
   }
 
-  // Tambahkan event click dan touchstart agar responsif di mobile
+ 
   fullscreenBtn.addEventListener('click', () => openFullscreen(video));
   fullscreenBtn.addEventListener('touchstart', () => openFullscreen(video));
-</script>
+</script> -->
 
 
 
