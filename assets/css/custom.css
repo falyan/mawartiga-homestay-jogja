@@ -88,13 +88,50 @@ body {
     margin-top: 75px;
   }
   
-  /* ROW UNTUK 3 GAMBAR */
-  .image-row {
+.image-row {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* supaya ada jarak merata */
+    max-width: 900px;
+    margin: auto;
+  }
+  .image-box {
+    flex: 0 0 32%;
+    max-width: 32%;
+    box-sizing: border-box;
+    margin-bottom: 15px; /* jarak antar baris */
+  }
+  .image-box img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    border-radius: 8px; /* opsional, biar agak rounded */
+    object-fit: cover;
+  }
+
+  /* Responsive: di layar kecil 1 kolom, di tablet 2 kolom */
+  @media (max-width: 768px) {
+    .image-box {
+      flex: 0 0 48%;
+      max-width: 48%;
+    }
+  }
+  @media (max-width: 480px) {
+    .image-box {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }  
+  
+  /* .image-row {
     justify-content: center;
-    gap: 20px;
     padding: 10px 20px;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 900px;
+    margin: auto;
   }
   
   .image-box {
@@ -109,7 +146,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+  } */
   
   
 .hero-section h1 {
