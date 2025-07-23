@@ -330,3 +330,74 @@ footer{
     height: 600px; /* Atur sesuai kebutuhan */
     object-fit: cover; /* Crop agar rapi */
   }
+
+
+.bg-slide {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 1;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .bg1 {
+    background-image: url('https://res.cloudinary.com/dxxs7g3ll/image/upload/v1753157292/RCC06114_x3rpio_1_bqk9um.webp');
+    animation-name: fade1;
+  }
+
+  .bg2 {
+    background-image: url('https://res.cloudinary.com/dxxs7g3ll/image/upload/v1753156025/bangku-meja_fcrt72.webp');
+    animation-name: fade2;
+  }
+
+  .bg3 {
+    background-image: url('https://res.cloudinary.com/dxxs7g3ll/image/upload/v1753157884/RCC06250_ztpsvb_h4r5ys.webp');
+    animation-name: fade3;
+  }
+
+  @keyframes fade1 {
+    0%, 33% { opacity: 1; }
+    33.1%, 100% { opacity: 0; }
+  }
+
+  @keyframes fade2 {
+    0%, 33% { opacity: 0; }
+    33.1%, 66% { opacity: 1; }
+    66.1%, 100% { opacity: 0; }
+  }
+
+  @keyframes fade3 {
+    0%, 66% { opacity: 0; }
+    66.1%, 100% { opacity: 1; }
+  }
+
+  /* .bg-carousel {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: slideBackground 8s infinite;
+    z-index: 0;
+  }
+
+@keyframes slideBackground {
+    0% {
+      background-image: url('https://res.cloudinary.com/dxxs7g3ll/image/upload/v1753157292/RCC06114_x3rpio_1_bqk9um.webp');
+    }
+    33% {
+      background-image: url('https://res.cloudinary.com/dxxs7g3ll/image/upload/v1753156791/RCC06004_pwivbh_hc9cqu.webp');
+    }
+    66% {
+      background-image: url('https://res.cloudinary.com/dxxs7g3ll/image/upload/v1753156025/bangku-meja_fcrt72.webp');
+    }
+
+  } */
