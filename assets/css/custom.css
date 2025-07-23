@@ -327,8 +327,8 @@ footer{
 
 .carousel-inner img {
     width: 100%;
-    height: 600px; /* Atur sesuai kebutuhan */
-    object-fit: cover; /* Crop agar rapi */
+    height: 600px; 
+    object-fit: cover; 
   }
 
 
@@ -377,27 +377,3 @@ footer{
     0%, 66% { opacity: 0; }
     66.1%, 100% { opacity: 1; }
   }
-
-  /* .bg-carousel {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: slideBackground 8s infinite;
-    z-index: 0;
-  }
-
-@keyframes slideBackground {
-    0% {
-      background-image: url('https://res.cloudinary.com/dxxs7g3ll/image/upload/v1753157292/RCC06114_x3rpio_1_bqk9um.webp');
-    }
-    33% {
-      background-image: url('https://res.cloudinary.com/dxxs7g3ll/image/upload/v1753156791/RCC06004_pwivbh_hc9cqu.webp');
-    }
-    66% {
-      background-image: url('https://res.cloudinary.com/dxxs7g3ll/image/upload/v1753156025/bangku-meja_fcrt72.webp');
-    }
-
-  } */
