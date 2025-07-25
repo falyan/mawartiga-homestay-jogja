@@ -97,7 +97,31 @@ body {
     margin-top: 75px;
   }
   
-.image-row {
+  .image-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+    margin: auto;
+    padding: 0;
+    gap: 0; /* Ini penting: hapus jarak antar kolom & baris */
+  }
+  
+  .image-box {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 0; /* Kalau mau benar-benar rapat */
+  } 
+
+
+/* .image-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
@@ -121,7 +145,7 @@ body {
     object-fit: cover;
   }
 
-  /* Responsive: di layar kecil 1 kolom, di tablet 2 kolom */
+
   @media (max-width: 768px) {
     .image-box {
       flex: 0 0 48%;
@@ -133,7 +157,7 @@ body {
       flex: 0 0 100%;
       max-width: 100%;
     }
-  }  
+  }   */
   
 #carouselPreview2 {
     max-width: 100%;
