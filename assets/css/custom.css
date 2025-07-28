@@ -3,14 +3,7 @@ body {
     background-color: #F8F6F0;
 }
 
-
- .navbar-collapse {
-    background-color: #5D3A00 !important;
-    box-shadow: none !important;
-  }
-
-  /* Biar nav-link terlihat di background coklat */
-  .navbar-nav .nav-link {
+.navbar-nav .nav-link {
     color: white !important;
   }
 
@@ -50,7 +43,6 @@ body {
     color: #C18F59;
   }
   
-
   .navbar.scrolled {
     background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(6px);
