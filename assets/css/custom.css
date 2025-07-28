@@ -3,10 +3,6 @@ body {
     background-color: #F8F6F0;
 }
 
-.navbar-nav .nav-link {
-    color: white !important;
-  }
-
   .navbar-nav .nav-link:hover {
     color: #FFD699 !important; /* Coklat muda pas hover */
   }
