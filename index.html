@@ -43,12 +43,62 @@
         <i class="fa-regular fa-circle-up"></i>
     </button>
 
-    <!-- Header Section -->     
-    <nav  class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <!-- Header Section -->  
+     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+  <div class="container-fluid d-flex justify-content-between">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center fw-semibold" style="height: 60px; margin-left: -8px;" href="#home">
+      <img src="assets/images/logo.png" alt="Homestay Logo" style="height: 60px;">
+      <span style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 800;">
+        Mawartiga Homestay Jogja
+      </span>
+    </a>
+
+    <!-- Toggle Button (untuk tampilan mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+      <ul class="navbar-nav align-items-center">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#gallery">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#fasilitas">Fasilitas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#tentang">Tentang Kami</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#alamat">Alamat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#tempatTerdekat">Tempat Terdekat</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#pesan">Booking</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Tombol WhatsApp -->
+     <a href="https://wa.me/62811258018?text=Hai, saya ingin menanyakan ketersediaan kamar di Mawartiga Homestay"
+                  class="btn-book-icon position-absolute top-50 end-0 translate-middle-y me-3" title="Pesan via WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+    </a>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarBooking">
+              </div>
+  </div>
+</nav>
+   
+    <!-- <nav  class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid d-flex justify-content-between">
             <a class="navbar-brand d-flex align-items-center" style="height: 60px; margin-left: -8px;" href="#home">
                 <img src="assets/images/logo.png" alt="Homestay Logo" style="height: 60px;">
-                <span style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 800; color: #000"> <!-- rgba(0,0,0,0.7) -->
+                <span style="font-family: 'Poppins', sans-serif; font-size: 1.2rem; font-weight: 800; color: #000"> 
                     Mawartiga Homestay Jogja
                 </span>
             </a>
@@ -60,7 +110,7 @@
                   <div class="collapse navbar-collapse justify-content-end" id="navbarBooking">
               </div> 
           </div>
-      </nav>
+      </nav> -->
 
   <header class="hero-mawartiga">
     <div class="video-area" style="position: relative; width: 100%; max-width: 800px; margin: auto;">
@@ -108,7 +158,7 @@
 
     <div class="section-divider"></div>
 
-    <div class="foto-wrapper" style="max-width: 1200px; margin: 40px auto;">
+    <div id="gallery" class="foto-wrapper" style="max-width: 1200px; margin: 40px auto;">
     
       <!-- FOTO UTAMA (LEBAR) -->
       <div class="image-full" style="margin-bottom: 0;">
@@ -208,12 +258,12 @@
   });
 </script>  
 
-      <div class="section-divider"></div>
+      <div id="tentang" class="section-divider"></div>
 
       <section class="container-xl my-4">
         <div class="row g-4 align-items-stretch">
           <!-- Container 1: About -->
-          <div class="col-sm-12 col-md-6 d-flex">
+          <div  class="col-sm-12 col-md-6 d-flex">
             <div class="about-homestay p-4 rounded w-100 h-100">
               <h4 style="color: rgba(0, 0, 0, 0.7);" class="fw-bold text-center">Tentang Kami</h4>
       
@@ -232,7 +282,7 @@
           </div>
       
           <!-- Container 2: Facilities -->
-          <div class="col-sm-12 col-md-6 d-flex">
+          <div id="fasilitas" class="col-sm-12 col-md-6 d-flex">
             <div class="about-homestay p-4 rounded w-100 h-100">
               <h4 style="color: rgba(0, 0, 0, 0.7);" class="fw-bold text-center">Fasilitas</h4>
               <div class="container px-0">
@@ -324,8 +374,8 @@
 
     <div class="section-divider"></div>
 
-    <section class="container my-5">
-  <h4 class="mb-4 text-center" style="color: rgba(0, 0, 0, 0.7)">Tempat Terdekat</h4>
+<section id="tempatTerdekat" class="container my-5">
+      <h4  class="mb-4 text-center" style="color: rgba(0, 0, 0, 0.7)">Tempat Terdekat</h4>
   <div class="row g-4">
 
     <!-- Spot 1 -->
@@ -406,7 +456,7 @@
     <div class="row">
       <!-- Address Section -->
       <div class="col-md-4 text-center text-md-start">
-        <h5 class="fw-bold">Alamat</h5>
+        <h5 id="alamat" class="fw-bold">Alamat</h5>
         <p>Jl. Mawar III/51 Baciro, Yogyakarta</p>
         <p>Email: mawartigahomestay@gmail.com</p>
         <p>Telepon: +62 811258018</p>
@@ -429,7 +479,7 @@
         <a href="https://www.tiktok.com/@mawartigahomestayjogja" class="text-light mx-2"><i class="fab fa-tiktok fa-2x"></i></a>
 
         <!-- Booking Platforms -->
-        <div class="mt-4">
+        <div id="pesan" class="mt-4">
           <h5 class="fw-bold mb-3">Booking</h5>
           <div class="d-flex justify-content-center justify-content-md-end gap-3">
             <a href="https://www.booking.com/hotel/id/mawartiga-homestay-kota-yogyakarta.id.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaGiIAQGYARK4ARfIAQzYAQHoAQH4AQyIAgGoAgO4Av_lg8QGwAIB0gIkZDc3ZDg0NmEtMjFhMC00OTUzLTk5MmUtNjEyNTY5NDYwNjQ42AIG4AIB&sid=a05bab5fa01790fb07512dd218f67b6c&checkin=2025-07-23&checkout=2025-07-24&dest_id=7480596&dest_type=hotel&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&soh=1&sr_order=popularity&srepoch=1753281332&srpvid=42a36690ab170580&type=total&ucfs=1&#no_availability_msg" target="_blank" rel="noopener">
