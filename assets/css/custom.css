@@ -401,3 +401,16 @@ footer{
     0%, 66% { opacity: 0; }
     66.1%, 100% { opacity: 1; }
   }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
