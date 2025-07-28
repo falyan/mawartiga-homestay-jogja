@@ -3,6 +3,31 @@ body {
     background-color: #F8F6F0;
 }
 
+
+ .navbar-collapse {
+    background-color: #5D3A00 !important;
+    box-shadow: none !important;
+  }
+
+  /* Biar nav-link terlihat di background coklat */
+  .navbar-nav .nav-link {
+    color: white !important;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #FFD699 !important; /* Coklat muda pas hover */
+  }
+
+  /* Optional: kecilkan padding collapse menu di HP */
+  @media (max-width: 768px) {
+    .navbar-collapse {
+      padding: 0.5rem 1rem;
+    }
+    .navbar-nav .nav-item {
+      margin-bottom: 0.3rem;
+    }
+  }
+
 .navbar {
     position: fixed;
     top: 0;
