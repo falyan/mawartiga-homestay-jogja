@@ -3,6 +3,20 @@ body {
     background-color: #F8F6F0;
 }
   
+@media (max-width: 768px) {
+    #navbarBooking {
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+.navbar-nav .nav-link {
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      font-size: 0.9rem;
+    }  
 
 .navbar {
     position: fixed;
@@ -14,6 +28,8 @@ body {
     padding: 10px 20px;
     box-shadow: none;
     transition: background-color 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
   }
   
   .navbar a {
@@ -120,44 +136,6 @@ body {
     border-radius: 0; /* Kalau mau benar-benar rapat */
   } 
 
-
-/* .image-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    max-width: 900px;
-    margin: auto;
-    gap: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .image-box {
-    flex: 0 0 32%;
-    max-width: 32%;
-    box-sizing: border-box;
-    margin-bottom: 15px; 
-  }
-  .image-box img {
-    width: 100%;
-    height: 200px;
-    display: block;
-    border-radius: 3px; 
-    object-fit: cover;
-  }
-
-
-  @media (max-width: 768px) {
-    .image-box {
-      flex: 0 0 48%;
-      max-width: 48%;
-    }
-  }
-  @media (max-width: 480px) {
-    .image-box {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-  }   */
   
 #carouselPreview2 {
     max-width: 100%;
@@ -419,13 +397,4 @@ footer{
     background-color: #25D366; /* solid saat hover */
     transform: scale(1.05);
     transition: all 0.3s ease;
-  }
-
-   @media (max-width: 576px) {
-    #navbarBooking {
-      padding: 0 !important;
-      margin: 0 !important;
-      min-height: 0;
-      display: none; /* kalau tidak dipakai sama sekali */
-    }
   }
