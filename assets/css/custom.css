@@ -414,3 +414,9 @@ footer{
       transform: translateY(0);
     }
   }
+
+  #whatsappButton:hover {
+    background-color: #25D366; /* solid saat hover */
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }

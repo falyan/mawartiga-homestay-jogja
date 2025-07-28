@@ -39,8 +39,7 @@
 
 <body>
 
-  <!-- Tombol WhatsApp -->
-<a id="whatsappButton"
+  <a id="whatsappButton"
    href="https://wa.me/62811258018?text=Hai, saya ingin menanyakan ketersediaan kamar di Mawartiga Homestay"
    target="_blank"
    title="Pesan via WhatsApp"
@@ -48,30 +47,16 @@
      position: fixed;
      bottom: 20px;
      left: 20px;
-     background-color: #25D366;
+     background-color: rgba(37, 211, 102, 0.8); /* ijo transparan */
      color: white;
      padding: 12px 16px;
      border-radius: 50%;
      font-size: 24px;
      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-     display: none;
      z-index: 999;
    ">
    <i class="bi bi-whatsapp"></i>
 </a>
-
-<!-- Script Scroll Logic -->
-<script>
-  const whatsappBtn = document.getElementById("whatsappButton");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      whatsappBtn.style.display = "block";
-    } else {
-      whatsappBtn.style.display = "none";
-    }
-  });
-</script>
 
     <button id="scrollTopBtn" class="btn btn-warning shadow" onclick="scrollToTop()">
         <i class="fa-regular fa-circle-up"></i>
