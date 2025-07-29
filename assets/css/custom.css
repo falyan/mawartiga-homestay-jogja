@@ -55,7 +55,7 @@ body {
 }
 
 .navbar-toggler {
-  border-color: #5D3A00; /* opsional, warna border tombol */
+  border-color: transparent; /* opsional, warna border tombol */
 }
 
 .navbar-toggler-icon {
