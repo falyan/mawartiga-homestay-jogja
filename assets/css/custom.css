@@ -73,6 +73,7 @@ body {
   @media (min-width: 992px) {
     .brand-text {
       font-size: 1.5rem; /* ukuran untuk laptop ke atas */
+      font-weight: 700;
     }
   }
 
