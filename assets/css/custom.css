@@ -49,13 +49,13 @@ body {
 }
 
 .navbar-icons a {
-    color: #8B4513;
+    color: #C18F59;
     font-size: 15px;
     transition: color 0.50s ease-in-out;
 }
 
 .navbar-toggler {
-  border-color: #8B4513; /* opsional, warna border tombol */
+  border-color: #C18F59; /* opsional, warna border tombol */
 }
 
 .navbar-toggler-icon {
